@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     func printData() {
         print(previousValue)
         print(operatorFunc)
+        print(currentValue)
     }
     
     func resolve (newValue: Double) -> Double {
@@ -36,7 +37,6 @@ class ViewController: UIViewController {
         }
         // Return the result
         return operationToExecute(previousValue, newValue)
-        printData()
     }
 
     @IBAction func digitDidTap(_ sender: UIButton) {
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         labelResult.text = ""
         previousValue = 0.0
         operatorFunc = nil
+        currentValue = ""
         printData()
     }
     
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
             print(ope)
             print("\n")
         }
-        
+        currentValue = ""
         labelResult.text = ""
     }
     
